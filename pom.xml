@@ -14,9 +14,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>14</java.version>
         <junit-jupiter-engine.version>5.7.0-M1</junit-jupiter-engine.version>
-        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
-        <maven.compiler.release>3.6</maven.compiler.release>
 <!--        <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>-->
         <mainClass>Main</mainClass>
 
@@ -29,13 +28,6 @@
 
 
     </properties>
-
-    <dependencies>
-
-        <!-- junit 5, unit test -->
-
-
-    </dependencies>
 
     <build>
         <finalName>java-compound-data</finalName>
@@ -53,11 +45,6 @@
                     </configuration>
                 </plugin>
 
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>${maven-surefire-plugin.version}</version>
-                </plugin>
 
 <!--                <plugin>-->
 <!--                    <artifactId>maven-jar-plugin</artifactId>-->
@@ -78,6 +65,13 @@
         </pluginManagement>
 
         <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+            </plugin>
+
             <plugin>
                 <!--                    <groupId>org.apache.maven.plugins</groupId>-->
                 <artifactId>maven-assembly-plugin</artifactId>

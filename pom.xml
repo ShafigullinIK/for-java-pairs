@@ -16,7 +16,8 @@
         <junit-jupiter-engine.version>5.7.0-M1</junit-jupiter-engine.version>
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
-        <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
+        <maven.compiler.release>3.6</maven.compiler.release>
+<!--        <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>-->
         <mainClass>Main</mainClass>
 
         <!-- https://maven.apache.org/general.html#encoding-warning -->
@@ -48,6 +49,7 @@
                         <!-- put your configurations here -->
                         <source>${java.version}</source>
                         <target>${java.version}</target>
+                        <release>${maven.compiler.release}</release>
                     </configuration>
                 </plugin>
 
@@ -57,18 +59,17 @@
                     <version>${maven-surefire-plugin.version}</version>
                 </plugin>
 
-                <plugin>
-                    <!--                    <groupId>org.apache.maven.plugins</groupId>-->
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>${maven-jar-plugin.version}</version>
-                    <configuration>
-                        <archive>
-                            <manifest>
-                                <mainClass>${mainClass}</mainClass>
-                            </manifest>
-                        </archive>
-                    </configuration>
-                </plugin>
+<!--                <plugin>-->
+<!--                    <artifactId>maven-jar-plugin</artifactId>-->
+<!--                    <version>${maven-jar-plugin.version}</version>-->
+<!--                    <configuration>-->
+<!--                        <archive>-->
+<!--                            <manifest>-->
+<!--                                <mainClass>${mainClass}</mainClass>-->
+<!--                            </manifest>-->
+<!--                        </archive>-->
+<!--                    </configuration>-->
+<!--                </plugin>-->
 
 
 

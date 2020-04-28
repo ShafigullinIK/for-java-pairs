@@ -15,5 +15,9 @@ public interface Pair<L, R, T> extends Function<Function<L, Function<R, T>>, T> 
     static <L, R> R cdr(Pair<L, R, R> pair) {
         return pair.apply(left -> right -> right);
     }
+
+    static String pairToString(Pair pair){ return "(" + car(pair) + ", " + cdr(pair) + ")";}
+
+
 }
 

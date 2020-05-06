@@ -16,8 +16,13 @@ public interface Pair<L, R, T> extends Function<Function<L, Function<R, T>>, T> 
         return pair.apply(left -> right -> right);
     }
 
-    static String pairToString(Pair pair){ return "(" + car(pair) + ", " + cdr(pair) + ")";}
+    static String pairToString(Pair pair) {
+        return "(" + car(pair) + ", " + cdr(pair) + ")";
+    }
 
+    static boolean isPair(Object o) {
+        return o instanceof Pair;
+    }
 
 }
 
